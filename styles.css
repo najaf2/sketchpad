@@ -1,5 +1,6 @@
 #grids {
     display:inline-flex;
+
 }
 
 .outer {
@@ -11,8 +12,61 @@
 
     margin: auto;
     border: 1px solid black;
+
+    position: relative;
+    left: 15%;
+
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    animation: outerBoxShadow 5s ease infinite;
+
 }
 
 #grids:hover {
-    background-color: red !important;
+
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(
+-45deg
+, #22bd7c, #fffb2a, #f7a800, rgb(2, 175, 255));
+    background-size: 500% 500%;
+    animation: backgroundGradient 10s ease infinite;
+}
+
+@keyframes backgroundGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+
+}
+
+@keyframes outerBoxShadow {
+    0% {
+        box-shadow: 15px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    50% {
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.336);
+
+    }
+
+    100% {
+        box-shadow: 15px 15px rgba(0, 0, 0, 0.5);
+    }
 }
