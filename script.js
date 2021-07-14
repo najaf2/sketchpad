@@ -1,8 +1,8 @@
 const outerDiv = document.querySelector('.outer');
+const resetBtn = document.querySelector('#resetBtn')
 
-console.log(outerDiv);
+let size = 16*16;
 
-let size = 10*10;
 for (let i = 0; i < size; ++i) {
     let hw = 720/Math.sqrt(size);
 
@@ -18,11 +18,18 @@ for (let i = 0; i < size; ++i) {
 
 let elementsArray = document.querySelectorAll("#grids");
 
+resetBtn.addEventListener("click", () => {
+    for (let i = 0; i < elementsArray.length; ++i) {
+        elementsArray[i].style.backgroundColor = "white";
+    }});
+
 elementsArray.forEach(function(elem) {
     elem.addEventListener("mouseenter", function() {
         this.style.backgroundColor = randomColor();
     });
 });
+
+
 
 function randomColor() {
     const rndInt = Math.floor(Math.random() * 7) + 1
