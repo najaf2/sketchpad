@@ -5,19 +5,71 @@
 
 }
 
-.outer {
-    width: 720px;
-    height: 720px;
+.buttonsplus {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;    
+}
 
-    max-width: 720px;
-    max-height: 720px;
+.content {
+    position: relative;
+    top: 25%;
+}
+
+#resetBtn {
+    width: 80px;
+    background-color: white;
+    border-radius: 50px;
+    border: 3px solid black;
+
+}
+
+#blackPen {
+    width: 80px;
+    background-color: white;
+    border-radius: 50px;
+    border: 3px solid black;
+}
+
+#rainbowPen {
+    width: 80px;
+    background-color: white;
+    border-radius: 50px;
+    border: 3px solid black;
+
+}
+
+#colorpicker {
+    width: 80px;
+    background-color: white;
+    border-radius: 50px;
+    border: 3px solid black;
+
+}
+
+#slider {
+    width: 80px;
+    background-color: white;
+    border-radius: 50px;
+    border: 3px solid black;
+    appearance: none;
+}
+
+.outer {
+    width: 576px;
+    height: 576px;
+
+    max-width: 576px;
+    max-height: 576px;
 
     margin: auto;
     border: 1px solid black;
 
     position: relative;
 
-    top: 50%;
+    top: 57%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 

@@ -13,14 +13,10 @@ let elementsArray;
 makeDivs();
 addHover();
 
-
-
-
-
 // make divs
 function makeDivs() {
     for (let i = 0; i < size; ++i) {
-        let hw = (720 - Math.sqrt(size)*2)/Math.sqrt(size);
+        let hw = (576 - Math.sqrt(size)*2)/Math.sqrt(size);
 
         let div = document.createElement("div");
         div.style.backgroundColor = "white";
