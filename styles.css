@@ -1,5 +1,7 @@
 #grids {
     display:inline-flex;
+    border: 1px solid lightgray;
+
 
 }
 
@@ -14,7 +16,6 @@
     border: 1px solid black;
 
     position: relative;
-    left: 15%;
 
     top: 50%;
     -ms-transform: translateY(-50%);
@@ -35,7 +36,7 @@ body {
     color: #fff;
     background: linear-gradient(
 -45deg
-, #22bd7c, #fffb2a, #f7a800, rgb(2, 175, 255));
+, yellow, green, blue, red);
     background-size: 500% 500%;
     animation: backgroundGradient 10s ease infinite;
 }
@@ -58,15 +59,15 @@ body {
 
 @keyframes outerBoxShadow {
     0% {
-        box-shadow: 15px 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
     }
 
     50% {
-        box-shadow: 5px 5px rgba(0, 0, 0, 0.336);
+        box-shadow: 15px 15px rgba(0, 0, 0, 0.336);
 
     }
 
     100% {
-        box-shadow: 15px 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
     }
 }
