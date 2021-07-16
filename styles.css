@@ -1,8 +1,17 @@
 #grids {
     display:inline-flex;
     border: 1px solid lightgray;
+}
 
+.text {
+    font-size: 53px;
+    position: relative;
+    top: 10%;
+    display: flex;
+    justify-content: center;
 
+    font-family: monospace;
+    font-weight: bolder;
 }
 
 .buttonsplus {
@@ -15,46 +24,79 @@
 
 .content {
     position: relative;
-    top: 25%;
+    top: 17%;
 }
 
 #resetBtn {
-    width: 80px;
+    width: 100px;
     background-color: white;
     border-radius: 50px;
-    border: 3px solid black;
+    border: 3px solid white;
 
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 500% 500%;
+    animation: backgroundGradient 10s ease infinite;
+    color: white;
+    font-family: monospace;
+    font-weight: bolder;
 }
 
 #blackPen {
-    width: 80px;
+    width: 100px;
     background-color: white;
     border-radius: 50px;
-    border: 3px solid black;
+    border: 3px solid white;
+
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 500% 500%;
+    animation: backgroundGradient 10s ease infinite;
+    color: white;
+    font-family: monospace;
+    font-weight: bolder;
 }
 
 #rainbowPen {
-    width: 80px;
+    width: 100px;
     background-color: white;
     border-radius: 50px;
-    border: 3px solid black;
+    border: 3px solid white;
 
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 500% 500%;
+    animation: backgroundGradient 10s ease infinite;
+    color: white;
+    font-family: monospace;
+    font-weight: bolder;
 }
 
 #colorpicker {
     width: 80px;
     background-color: white;
     border-radius: 50px;
-    border: 3px solid black;
+    border: 3px solid white;
 
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 500% 500%;
+    animation: backgroundGradient 10s ease infinite;
+    color: white;
+    font-family: monospace;
+    font-weight: bolder;
 }
 
 #slider {
-    width: 80px;
+    width: 100px;
     background-color: white;
     border-radius: 50px;
-    border: 3px solid black;
+    border: 3px solid white;
     appearance: none;
+
+
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 500% 500%;
+    animation: backgroundGradient 10s ease infinite;
+    color: white;
+    font-family: monospace;
+    font-weight: bolder;
 }
 
 .outer {
@@ -69,11 +111,11 @@
 
     position: relative;
 
-    top: 57%;
+    top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 
-    animation: outerBoxShadow 5s ease infinite;
+    animation: outerBoxShadow 10s ease infinite;
 
 }
 
@@ -86,26 +128,21 @@ body {
     width: 100%;
     height: 100vh;
     color: #fff;
-    background: linear-gradient(
--45deg
-, yellow, green, blue, red);
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 500% 500%;
     animation: backgroundGradient 10s ease infinite;
 }
 
 @keyframes backgroundGradient {
     0% {
-        background-position: 0% 0%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-
-    }
-
-    100% {
-        background-position: 0% 0%;
-    }
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 
 }
 
@@ -115,7 +152,7 @@ body {
     }
 
     50% {
-        box-shadow: 15px 15px rgba(0, 0, 0, 0.336);
+        box-shadow: 30px 30px rgba(0, 0, 0, 0.286);
 
     }
 
