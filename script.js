@@ -3,10 +3,10 @@ const resetBtn = document.querySelector('#resetBtn')
 const blackBtn = document.querySelector('#blackPen');
 const rainBowBtn = document.querySelector('#rainbowPen');
 const colorPicker = document.querySelector('#colorpicker');
+const whiteBtn = document.querySelector('#whitePen');
 const slider = document.querySelector('#slider');
 
-const all = document.querySelector("#all");
-
+// DO INITIALIZATION OF ALL FUNCTIONS AND VARIABLES
 let size = 25*25;
 let penColor = "black";
 let rainbowClicked = false;
@@ -19,7 +19,7 @@ addDown();
 addUp();
 addClick();
 
-// make divs
+// MAKE ALL DIVS
 function makeDivs() {
     for (let i = 0; i < size; ++i) {
         let hw = (576 - Math.sqrt(size)*2)/Math.sqrt(size);
@@ -36,6 +36,7 @@ function makeDivs() {
 
 }
 
+// SET WHETHER MOUSE IS PRESSED DOWN OR NOT
 function setDown() {
     mouseDown = true;
 }
@@ -44,7 +45,8 @@ function setUp() {
 }
 
 
-//add mouse hover over canvas effect
+// ADD EVENT LISTNERS TO ALL DIVS
+
 function addDown() {
     elementsArray.forEach(function(elem) {
         elem.addEventListener("mousedown", function(elem) {
@@ -60,8 +62,6 @@ function addUp() {
         })
     });
 }
-
-
 
 function addHover() {
     elementsArray.forEach(function(elem) {
@@ -87,17 +87,26 @@ function addClick() {
     });
 }
 
+// ALL BUTTONS AND INPUTS
+
 // Reset button clicked.
 resetBtn.addEventListener("click", () => {
     for (let i = 0; i < elementsArray.length; ++i) {
         elementsArray[i].style.backgroundColor = "white";
     }
+    penColor = "black";
+    rainbowClicked = false;
+    resetSelected();
 });
 
 // Change color
 colorPicker.addEventListener("input", function(elem) {
     rainbowClicked = false;
     penColor = elem.target.value.toString();
+
+    resetSelected();
+    colorPicker.style.color = "blue";
+    colorPicker.style.borderColor = "blue";
 })
 
 // Change size of canvas
@@ -120,11 +129,28 @@ rainBowBtn.addEventListener("click", function() {
     else {
         rainbowClicked = true;
     }
+
+    resetSelected();
+    rainBowBtn.style.color = "blue";
+    rainBowBtn.style.borderColor = "blue";
 });
 
 blackBtn.addEventListener("click", function() {
     rainbowClicked = false;
     penColor = "black";
+
+    resetSelected();
+    blackBtn.style.color = "blue";
+    blackBtn.style.borderColor = "blue";
+})
+
+whiteBtn.addEventListener("click", function() {
+    rainbowClicked = false;
+    penColor = "white";
+
+    resetSelected();
+    whiteBtn.style.color = "blue";
+    whiteBtn.style.borderColor = "blue";
 })
 
 
@@ -168,6 +194,21 @@ function random() {
             return "black";
 
     }
+}
+
+function resetSelected() {
+    blackBtn.style.color = "white";
+    blackBtn.style.borderColor = "white";
+
+    rainBowBtn.style.color = "white";
+    rainBowBtn.style.borderColor = "white";
+
+    colorPicker.style.color = "white";
+    colorPicker.style.borderColor = "white";
+
+    whiteBtn.style.color = "white";
+    whiteBtn.style.borderColor = "white";
+  
 }
 
 
